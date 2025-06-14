@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AI blog generation</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+        />
+        <style>
+            @keyframes rotate {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+
+            @-webkit-keyframes rotate {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+
+            .load {
+                width: 50px;
+                height: 50px;
+                margin: 0 auto;
+                border: 5px solid #f3f3f3;
+                border-top: 5px solid #3498db;
+                border-radius: 50%;
+                animation: rotate 2s linear infinite;
+                -webkit-animation: rotate 2s linear infinite;
+                transition: all 0.5s ease-in;
+                animation-name: rotate;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                animation-direction: normal;
+                animation-fill-mode: forwards;
+                animation-play-state: running;
+                animation-delay: 0s;
+            }
+        </style>
+    </head>
+    <body class="flex flex-col min-h-screen bg-gray-100 font-sans antialiased">
+        <!-- Navbar -->
+        <nav class="bg-blue-600 p-4 text-white flex justify-between">
+            <div class="text-3xl font-bold">AI Blog Generation</div>
+            <div><a href="#!" class="text-white hover:underline">Login</a></div>
+        </nav>
+
+        <br />
+        <br />
+        <!-- Main -->
+        <div class="flex-grow container mx-auto p-10 px-4 sm:px-0">
+            <div
+                class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-md transiton transform hover:scale-105 flex flex-col"
+            >
+                <!-- Introduction section -->
+                <div class="text-center">
+                    <h2 class="text-2xl font-semibold mb-4">
+                        Welcome to AI Blog Generation
+                    </h2>
+                    <p class="text-gray-700">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Eligendi autem iure accusantium saepe? Aliquid vel
+                        libero atque temporibus pariatur. Voluptatem, assumenda
+                        esse tenetur id inventore iure fugiat numquam odit?
+                        Praesentium, numquam. Impedit minima perferendis fuga
+                        aliquam cupiditate odio, hic provident optio veritatis,
+                        voluptatum eum cumque nemo excepturi quibusdam iste
+                        suscipit officia iusto! Vel libero obcaecati sed
+                        laborum. Nisi amet magnam quidem minus molestias sed,
+                        nesciunt blanditiis dolore ex aut molestiae nostrum
+                        assumenda nemo expedita vitae incidunt iste animi? Iusto
+                        soluta amet totam blanditiis excepturi! Recusandae iusto
+                        blanditiis in ullam nemo placeat similique ipsam totam
+                        quod, voluptatum molestias illo voluptates sunt.
+                    </p>
+                </div>
+                <br />
+                <!-- Youtube section -->
+                <div class="text-center">
+                    <h2 class="text-xl font-semibold mb-4">
+                        Enter Youtube URL
+                    </h2>
+                    <div class="flex space-x-4">
+                        <input
+                            id="youtubeLink"
+                            type="url"
+                            placeholder="Paste Youtube Link..."
+                            class="flex-grow p-2 border-blue-400 rounded-md"
+                        />
+                        <button
+                            id="generateBlogButton"
+                            class="bg-blue-600 text-white px-4 py-2 rounded-r-md hover:bg-blue-700 transition-colors"
+                        >
+                            Generate
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Generated blog display section -->
+                <section class="mt-8 flex-grow">
+                    <h2 class="text-xl mb-4 font-semibold">
+                        Generate Blog Article
+                    </h2>
+                    <div id="blogContent" class="mt-2 text-gray-700 space-y-4">
+                        <!-- section for loading circle -->
+                        <div
+                            style="display: none"
+                            id="loading-circle"
+                            class="load"
+                        ></div>
+                    </div>
+                </section>
+                <br />
+            </div>
+        </div>
+        <footer class="bg-gray-800 text-white py-4 text-center">
+            Powered by <a href="#!" class="text-blue-400 hover:underline">AI</a>
+        </footer>
+    </body>
+</html>
